@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "word.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
