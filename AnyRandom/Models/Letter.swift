@@ -11,3 +11,4 @@ enum Alphabet: String {
     case englishCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     case english = "abcdefghijklmnopqrstuvwxyz"
     }
+ 

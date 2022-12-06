@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+ 
 class RandomModesViewController: UITableViewController {
     
     // MARK: - Private Properties
