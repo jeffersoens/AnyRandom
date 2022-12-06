@@ -48,7 +48,7 @@ class LotteryViewController: UIViewController {
         copyButton.isHidden = false
         //answerLabel.text = getArray().formatted()
     }
-     
+      
 //MARK: - Private Methods
     /*
     private func getArray() -> [String] {
