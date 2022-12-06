@@ -200,7 +200,7 @@
         <!--Цвет-->
         <scene sceneID="asa-cH-bfa">
             <objects>
-                <viewController id="naf-jy-KON" sceneMemberID="viewController">
+                <viewController id="naf-jy-KON" customClass="RandomColorViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6O-ow-T57">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,6 +240,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyButtonTapped" destination="naf-jy-KON" eventType="touchUpInside" id="ySp-hQ-hKO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x1-4C-CmZ">
                                 <rect key="frame" x="103.5" y="522.5" width="168" height="50"/>
@@ -259,6 +262,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateButtonTapped" destination="naf-jy-KON" eventType="touchUpInside" id="Pw1-hv-XT3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XrY-Yf-vxX"/>
@@ -279,6 +285,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Цвет" image="paintpalette.fill" catalog="system" id="KW4-HR-8nN"/>
+                    <connections>
+                        <outlet property="colorView" destination="jzh-Bn-lKX" id="ybN-Ob-8j6"/>
+                        <outlet property="hexLabel" destination="T3S-5n-uzL" id="nGZ-dM-aaf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDC-fr-jn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,13 +498,13 @@
         <!--Составить команды-->
         <scene sceneID="hAb-mt-mst">
             <objects>
-                <viewController id="EK5-H4-fwZ" sceneMemberID="viewController">
+                <viewController id="EK5-H4-fwZ" customClass="CreateTeamsViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HJg-Yz-igK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите имена участников через запятую:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drl-Ma-VyW">
-                                <rect key="frame" x="16" y="131" width="243" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите имена участников через запятую без пробелов:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drl-Ma-VyW">
+                                <rect key="frame" x="16" y="131" width="298.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -508,9 +518,9 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Лиза, Слава, Дима, Наташа..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-Cr-hMp">
                                 <rect key="frame" x="16" y="194" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-qv-Mc5">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" placeholder="2" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-qv-Mc5">
                                 <rect key="frame" x="16" y="290" width="70" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="nQR-lg-2nL"/>
@@ -536,6 +546,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateButtonTapped" destination="EK5-H4-fwZ" eventType="touchUpInside" id="gvX-nn-1nM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sb-Z4-wD9">
                                 <rect key="frame" x="16" y="434" width="126" height="30"/>
@@ -560,6 +573,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyButtonTapped" destination="EK5-H4-fwZ" eventType="touchUpInside" id="yRY-M6-byW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="how-6u-nwC"/>
@@ -593,6 +609,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Составить команды" id="GmH-ZH-u6B"/>
+                    <connections>
+                        <outlet property="copyButton" destination="IAa-A1-rZs" id="T2n-a2-XE0"/>
+                        <outlet property="numberOfTeamsTF" destination="KVd-qv-Mc5" id="pTt-xf-T3w"/>
+                        <outlet property="resultLabel" destination="RVU-3G-do3" id="6XD-m0-LUk"/>
+                        <outlet property="resultTitleLabel" destination="8Sb-Z4-wD9" id="Pg9-V9-dcd"/>
+                        <outlet property="teamMembersTF" destination="IZX-Cr-hMp" id="LiX-0Y-Ilf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lho-IG-bqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -868,25 +891,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Количество результатов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-S0-axp">
-                                <rect key="frame" x="16" y="245" width="270" height="30"/>
+                                <rect key="frame" x="16" y="245" width="299" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итог:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3q-1c-dfw">
-                                <rect key="frame" x="16" y="385" width="62.5" height="30"/>
+                                <rect key="frame" x="16" y="439" width="62.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xvk-1s-cd8">
-                                <rect key="frame" x="296" y="245" width="63" height="34"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsm-i3-Yjm">
-                                <rect key="frame" x="16" y="305" width="168" height="50"/>
+                                <rect key="frame" x="103.5" y="359" width="168" height="50"/>
                                 <color key="backgroundColor" red="0.18733119500000001" green="0.71979166670000005" blue="0.32044631289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3vt-Ul-pDL"/>
@@ -905,13 +922,13 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0s-Jx-RQ2">
-                                <rect key="frame" x="16" y="435" width="343" height="21.5"/>
+                                <rect key="frame" x="16" y="489" width="343" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIe-ne-chP">
-                                <rect key="frame" x="16" y="476.5" width="136" height="23"/>
+                                <rect key="frame" x="16" y="530.5" width="136" height="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title=" Скопировать" image="doc.on.clipboard" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
@@ -922,6 +939,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xvk-1s-cd8">
+                                <rect key="frame" x="16" y="295" width="343" height="34"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L2B-jx-FMf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -929,26 +952,27 @@
                             <constraint firstItem="E3q-1c-dfw" firstAttribute="top" secondItem="jsm-i3-Yjm" secondAttribute="bottom" constant="30" id="5NT-L9-RjF"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jsm-i3-Yjm" secondAttribute="trailing" symbolic="YES" id="AKA-Jh-GNq"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E3q-1c-dfw" secondAttribute="trailing" symbolic="YES" id="AOS-Za-3ch"/>
-                            <constraint firstAttribute="trailing" secondItem="Xvk-1s-cd8" secondAttribute="trailing" constant="16" id="BtZ-Lf-1Vq"/>
                             <constraint firstItem="I0s-Jx-RQ2" firstAttribute="top" secondItem="E3q-1c-dfw" secondAttribute="bottom" constant="20" id="CKr-BS-XEv"/>
-                            <constraint firstItem="jsm-i3-Yjm" firstAttribute="top" secondItem="fbG-S0-axp" secondAttribute="bottom" constant="30" id="CX6-24-exD"/>
+                            <constraint firstItem="jsm-i3-Yjm" firstAttribute="centerX" secondItem="kwg-3p-p7V" secondAttribute="centerX" id="Fr6-V6-rBC"/>
                             <constraint firstItem="kIe-ne-chP" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="FyY-Xz-dqi"/>
                             <constraint firstItem="kIe-ne-chP" firstAttribute="top" secondItem="I0s-Jx-RQ2" secondAttribute="bottom" constant="20" id="Gtz-gd-ieB"/>
+                            <constraint firstItem="Xvk-1s-cd8" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="OwX-Vm-pd2"/>
+                            <constraint firstItem="jsm-i3-Yjm" firstAttribute="top" secondItem="Xvk-1s-cd8" secondAttribute="bottom" constant="30" id="QcV-2g-eGg"/>
                             <constraint firstItem="I0s-Jx-RQ2" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="WfW-9c-YtF"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" secondItem="I0s-Jx-RQ2" secondAttribute="trailing" constant="16" id="XE9-6S-hWN"/>
                             <constraint firstItem="jN7-Ee-W3r" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="Xs8-dH-xvA"/>
-                            <constraint firstItem="jsm-i3-Yjm" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="ZvG-hc-Vm5"/>
-                            <constraint firstItem="Xvk-1s-cd8" firstAttribute="leading" secondItem="fbG-S0-axp" secondAttribute="trailing" constant="10" id="aNc-2d-9R1"/>
-                            <constraint firstItem="Xvk-1s-cd8" firstAttribute="top" secondItem="fbG-S0-axp" secondAttribute="top" id="cpy-Hs-bh1"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" secondItem="PZ9-RR-cyO" secondAttribute="trailing" constant="16" id="d3H-0D-YP2"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kIe-ne-chP" secondAttribute="bottom" constant="20" id="dJV-0z-xkg"/>
                             <constraint firstItem="jN7-Ee-W3r" firstAttribute="top" secondItem="L2B-jx-FMf" secondAttribute="top" constant="35" id="dQP-pB-bBt"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kIe-ne-chP" secondAttribute="trailing" symbolic="YES" id="hXT-ax-OTK"/>
                             <constraint firstItem="fbG-S0-axp" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="hv6-XU-gAQ"/>
+                            <constraint firstItem="Xvk-1s-cd8" firstAttribute="top" secondItem="fbG-S0-axp" secondAttribute="bottom" constant="20" id="iqs-dA-KN6"/>
                             <constraint firstItem="PZ9-RR-cyO" firstAttribute="leading" secondItem="jN7-Ee-W3r" secondAttribute="trailing" constant="20" id="k9g-cv-5XU"/>
                             <constraint firstItem="E3q-1c-dfw" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="kfn-9g-oaF"/>
+                            <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fbG-S0-axp" secondAttribute="trailing" symbolic="YES" id="obT-7L-NXe"/>
                             <constraint firstItem="PZ9-RR-cyO" firstAttribute="top" secondItem="jN7-Ee-W3r" secondAttribute="top" id="rhB-wx-S4Z"/>
                             <constraint firstItem="fbG-S0-axp" firstAttribute="top" secondItem="PZ9-RR-cyO" secondAttribute="bottom" constant="25" id="wLi-IB-oUs"/>
+                            <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" secondItem="Xvk-1s-cd8" secondAttribute="trailing" constant="16" id="xwQ-sZ-hkL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Лотерея" id="jdl-zD-qSp"/>

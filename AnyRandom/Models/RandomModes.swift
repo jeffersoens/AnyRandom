@@ -5,8 +5,6 @@
 //  Created by Вячеслав Горбатенко on 29.11.2022.
 //
 
-//Test Commit
-
 struct RandomMode {
     let segueIdentifier: String
     let title: String
