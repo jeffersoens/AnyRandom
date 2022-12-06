@@ -8,7 +8,7 @@
 import UIKit
  
 class TimeViewController: UIViewController {
-     
+    
 // MARK: - IB Outlets
     @IBOutlet var minimumTextField: UITextField!
     @IBOutlet var maximumTextField: UITextField!

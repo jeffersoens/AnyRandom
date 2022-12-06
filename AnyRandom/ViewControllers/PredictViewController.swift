@@ -20,7 +20,7 @@ class PredictViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-      
+    
     @IBAction func letKnowAnswer() {
         let countOfAnswers = Int.random(in: 0...2)
         switch countOfAnswers {

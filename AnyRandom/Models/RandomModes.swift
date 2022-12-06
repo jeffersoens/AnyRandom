@@ -6,7 +6,6 @@
 //
 
 //Test Commit
-  
 struct RandomMode {
     let segueIdentifier: String
     let title: String
