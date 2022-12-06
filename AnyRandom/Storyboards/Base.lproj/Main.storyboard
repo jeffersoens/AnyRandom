@@ -12,7 +12,7 @@
         <!--Число-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NumberViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,9 +61,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getRandomNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="xQQ-VO-SYv"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-bF-FF8">
                                 <rect key="frame" x="16" y="326" width="343" height="36"/>
@@ -82,9 +79,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="copyFromAnswerLabel" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEr-da-ABq"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-3E-D1c">
                                 <rect key="frame" x="81" y="122" width="264" height="89"/>
@@ -125,12 +119,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Число" image="123.rectangle.fill" catalog="system" id="zed-15-ZqD"/>
-                    <connections>
-                        <outlet property="answerLabel" destination="uhD-bF-FF8" id="AM6-CZ-rOk"/>
-                        <outlet property="copyButton" destination="74j-a9-Tap" id="s92-AX-zmQ"/>
-                        <outlet property="maximumTextField" destination="KnU-9G-R3E" id="8xl-wU-Ss3"/>
-                        <outlet property="minimumTextField" destination="gnE-0g-z8L" id="yQQ-VX-Hcc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +127,7 @@
         <!--Да или нет-->
         <scene sceneID="Gug-RD-rJP">
             <objects>
-                <viewController id="Xnn-2K-wfO" customClass="PredictViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xnn-2K-wfO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKa-4U-FjP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,9 +160,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="letKnowAnswer" destination="Xnn-2K-wfO" eventType="touchUpInside" id="dI1-Ww-4Ed"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6S-Ce-AjS">
                                 <rect key="frame" x="16" y="271" width="343" height="36"/>
@@ -182,9 +167,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-HH-4Iw">
-                                <rect key="frame" x="106" y="327" width="163" height="180"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="эмодзи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-HH-4Iw">
+                                <rect key="frame" x="157" y="431" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -196,11 +182,9 @@
                             <constraint firstItem="J6S-Ce-AjS" firstAttribute="top" secondItem="vf4-Sw-CaB" secondAttribute="bottom" constant="35" id="Csh-qR-OS9"/>
                             <constraint firstItem="J6S-Ce-AjS" firstAttribute="leading" secondItem="Q0o-Yf-SfS" secondAttribute="leading" constant="16" id="IFs-NI-3VH"/>
                             <constraint firstItem="J6S-Ce-AjS" firstAttribute="centerX" secondItem="dKa-4U-FjP" secondAttribute="centerX" id="JG0-86-2e7"/>
-                            <constraint firstItem="fdo-HH-4Iw" firstAttribute="centerX" secondItem="dKa-4U-FjP" secondAttribute="centerX" id="Tn7-rR-def"/>
                             <constraint firstItem="vf4-Sw-CaB" firstAttribute="centerX" secondItem="dKa-4U-FjP" secondAttribute="centerX" id="g7K-d5-Z6A"/>
                             <constraint firstItem="ZK6-yp-90D" firstAttribute="top" secondItem="Q0o-Yf-SfS" secondAttribute="top" constant="45" id="i43-pA-yj0"/>
                             <constraint firstItem="wEP-2L-DWa" firstAttribute="leading" secondItem="Q0o-Yf-SfS" secondAttribute="leading" constant="16" id="iho-oF-To0"/>
-                            <constraint firstItem="fdo-HH-4Iw" firstAttribute="top" secondItem="J6S-Ce-AjS" secondAttribute="bottom" constant="20" id="jzd-68-oaL"/>
                             <constraint firstItem="Q0o-Yf-SfS" firstAttribute="trailing" secondItem="wEP-2L-DWa" secondAttribute="trailing" constant="30" id="mnW-4W-Pg1"/>
                             <constraint firstItem="ZK6-yp-90D" firstAttribute="leading" secondItem="Q0o-Yf-SfS" secondAttribute="leading" constant="16" id="qAu-0c-Mfk"/>
                             <constraint firstItem="Q0o-Yf-SfS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZK6-yp-90D" secondAttribute="trailing" symbolic="YES" id="xui-25-WM3"/>
@@ -208,11 +192,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Да или нет" image="circle.righthalf.filled" catalog="system" id="hgf-Av-xNR"/>
-                    <connections>
-                        <outlet property="describeLabel" destination="J6S-Ce-AjS" id="X0B-On-Up8"/>
-                        <outlet property="emojiLabel" destination="fdo-HH-4Iw" id="g9j-zh-vQ1"/>
-                        <outlet property="quesionTextField" destination="wEP-2L-DWa" id="M2D-eg-o8Z"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cW-g7-g6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -428,7 +407,7 @@
         <!--Случайная буква-->
         <scene sceneID="DSz-MJ-iQg">
             <objects>
-                <viewController id="JoS-Kh-KjC" customClass="LetterViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JoS-Kh-KjC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pDp-4L-vca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,9 +450,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="makeLetter" destination="JoS-Kh-KjC" eventType="touchUpInside" id="KeZ-X2-URa"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySM-Ac-ANu">
                                 <rect key="frame" x="119.5" y="340" width="136" height="23"/>
@@ -486,9 +462,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="copyFromAnswerLabel" destination="JoS-Kh-KjC" eventType="touchUpInside" id="bF5-kR-1Dj"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kQE-UF-RCt"/>
@@ -507,12 +480,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Случайная буква" id="nX6-Ec-D62"/>
-                    <connections>
-                        <outlet property="answerLabel" destination="kGY-wD-dAC" id="IlF-sb-XLM"/>
-                        <outlet property="copyButton" destination="ySM-Ac-ANu" id="9dX-ki-AEs"/>
-                        <outlet property="languageChoseControl" destination="rVv-h0-edR" id="qdb-of-mIu"/>
-                        <outlet property="sizeChoseControl" destination="DLC-py-RS4" id="BhS-Wb-yx2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQ2-9i-Zpk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -747,7 +714,7 @@
         <!--Случайное время-->
         <scene sceneID="8XV-3I-mJx">
             <objects>
-                <viewController id="ttL-by-p1y" customClass="TimeViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ttL-by-p1y" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ff-Sb-wyf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -778,13 +745,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="DqX-k0-zWU">
                                         <rect key="frame" x="65" y="0.0" width="100" height="89"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FHm-g7-9gD">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FHm-g7-9gD">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="24" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8rx-Iy-MFc">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="16" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8rx-Iy-MFc">
                                                 <rect key="frame" x="0.0" y="55" width="100" height="34"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -815,9 +782,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getTime" destination="ttL-by-p1y" eventType="touchUpInside" id="VSD-Wl-gO5"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rVo-If-9eC">
                                 <rect key="frame" x="16" y="335" width="343" height="36"/>
@@ -836,9 +800,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="copyFromAnswerLabel" destination="ttL-by-p1y" eventType="touchUpInside" id="pwm-Hd-dK4"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uxp-V2-J9V"/>
@@ -856,12 +817,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Случайное время" id="IfV-fy-Lvt"/>
-                    <connections>
-                        <outlet property="answerLabel" destination="rVo-If-9eC" id="rva-NE-30T"/>
-                        <outlet property="copyButton" destination="BzA-CT-0ex" id="Zr4-Zh-ApS"/>
-                        <outlet property="maximumTextField" destination="8rx-Iy-MFc" id="aFA-5d-kDf"/>
-                        <outlet property="minimumTextField" destination="FHm-g7-9gD" id="aKG-rd-hje"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvh-lv-egT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -870,7 +825,7 @@
         <!--Лотерея-->
         <scene sceneID="NAE-i7-XVk">
             <objects>
-                <viewController id="jc1-aC-MDA" customClass="LotteryViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jc1-aC-MDA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kwg-3p-p7V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -948,9 +903,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getNumbers" destination="jc1-aC-MDA" eventType="touchUpInside" id="8FL-jO-gRK"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0s-Jx-RQ2">
                                 <rect key="frame" x="16" y="435" width="343" height="21.5"/>
@@ -969,9 +921,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="copyFromAnswerLabel" destination="jc1-aC-MDA" eventType="touchUpInside" id="SZM-4E-nM0"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L2B-jx-FMf"/>
@@ -1003,14 +952,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Лотерея" id="jdl-zD-qSp"/>
-                    <connections>
-                        <outlet property="answerLabel" destination="I0s-Jx-RQ2" id="UN3-G7-j5g"/>
-                        <outlet property="copyButton" destination="kIe-ne-chP" id="bgL-bj-zGr"/>
-                        <outlet property="countTextField" destination="Xvk-1s-cd8" id="Cxj-tg-mjz"/>
-                        <outlet property="maximumTextField" destination="JoJ-r1-gGy" id="NDY-g3-emd"/>
-                        <outlet property="minimumTextField" destination="YYr-rB-r5V" id="oEu-xB-Gam"/>
-                        <outlet property="titleLabel" destination="E3q-1c-dfw" id="Z2J-as-Aki"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="my2-Dh-QEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

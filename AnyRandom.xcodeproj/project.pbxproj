@@ -14,17 +14,6 @@
 		64EE3708293685110053C310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EE3707293685110053C310 /* Assets.xcassets */; };
 		64EE370B293685110053C310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EE3709293685110053C310 /* LaunchScreen.storyboard */; };
 		64EE3716293685910053C310 /* RandomModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EE3715293685910053C310 /* RandomModes.swift */; };
-		9C4E1FDC293E5F3600932688 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E1FDB293E5F3600932688 /* AlertController.swift */; };
-		9CE81EC5293E58F3009F52E1 /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81EC0293E58F2009F52E1 /* PredictViewController.swift */; };
-		9CE81EC6293E58F3009F52E1 /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81EC1293E58F2009F52E1 /* NumberViewController.swift */; };
-		9CE81EC7293E58F3009F52E1 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81EC2293E58F2009F52E1 /* LotteryViewController.swift */; };
-		9CE81EC8293E58F3009F52E1 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81EC3293E58F2009F52E1 /* TimeViewController.swift */; };
-		9CE81EC9293E58F3009F52E1 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81EC4293E58F2009F52E1 /* LetterViewController.swift */; };
-		9CE81ECF293E5916009F52E1 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81ECA293E5915009F52E1 /* Lottery.swift */; };
-		9CE81ED0293E5916009F52E1 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81ECB293E5915009F52E1 /* Time.swift */; };
-		9CE81ED1293E5916009F52E1 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81ECC293E5915009F52E1 /* Number.swift */; };
-		9CE81ED2293E5916009F52E1 /* Predict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81ECD293E5915009F52E1 /* Predict.swift */; };
-		9CE81ED3293E5916009F52E1 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE81ECE293E5916009F52E1 /* Letter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,17 +26,6 @@
 		64EE370A293685110053C310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64EE370C293685110053C310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64EE3715293685910053C310 /* RandomModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomModes.swift; sourceTree = "<group>"; };
-		9C4E1FDB293E5F3600932688 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		9CE81EC0293E58F2009F52E1 /* PredictViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
-		9CE81EC1293E58F2009F52E1 /* NumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
-		9CE81EC2293E58F2009F52E1 /* LotteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
-		9CE81EC3293E58F2009F52E1 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
-		9CE81EC4293E58F2009F52E1 /* LetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
-		9CE81ECA293E5915009F52E1 /* Lottery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
-		9CE81ECB293E5915009F52E1 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
-		9CE81ECC293E5915009F52E1 /* Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
-		9CE81ECD293E5915009F52E1 /* Predict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predict.swift; sourceTree = "<group>"; };
-		9CE81ECE293E5916009F52E1 /* Letter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +62,6 @@
 				64EE3717293685970053C310 /* Models */,
 				64EE3713293685430053C310 /* ViewControllers */,
 				64EE37142936854D0053C310 /* Storyboards */,
-				9C4E1FDD293E5F3C00932688 /* Extensions */,
 				64EE3707293685110053C310 /* Assets.xcassets */,
 				64EE370C293685110053C310 /* Info.plist */,
 			);
@@ -103,11 +80,6 @@
 		64EE3713293685430053C310 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9CE81EC4293E58F2009F52E1 /* LetterViewController.swift */,
-				9CE81EC2293E58F2009F52E1 /* LotteryViewController.swift */,
-				9CE81EC1293E58F2009F52E1 /* NumberViewController.swift */,
-				9CE81EC3293E58F2009F52E1 /* TimeViewController.swift */,
-				9CE81EC0293E58F2009F52E1 /* PredictViewController.swift */,
 				64630045293E2C84000934C6 /* RandomModesViewController.swift */,
 			);
 			path = ViewControllers;
@@ -125,22 +97,9 @@
 		64EE3717293685970053C310 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9CE81ECE293E5916009F52E1 /* Letter.swift */,
-				9CE81ECA293E5915009F52E1 /* Lottery.swift */,
-				9CE81ECC293E5915009F52E1 /* Number.swift */,
-				9CE81ECB293E5915009F52E1 /* Time.swift */,
-				9CE81ECD293E5915009F52E1 /* Predict.swift */,
 				64EE3715293685910053C310 /* RandomModes.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		9C4E1FDD293E5F3C00932688 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9C4E1FDB293E5F3600932688 /* AlertController.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,20 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EE3716293685910053C310 /* RandomModes.swift in Sources */,
-				9C4E1FDC293E5F3600932688 /* AlertController.swift in Sources */,
-				9CE81ED2293E5916009F52E1 /* Predict.swift in Sources */,
-				9CE81EC8293E58F3009F52E1 /* TimeViewController.swift in Sources */,
-				9CE81ED0293E5916009F52E1 /* Time.swift in Sources */,
-				9CE81EC5293E58F3009F52E1 /* PredictViewController.swift in Sources */,
-				9CE81ECF293E5916009F52E1 /* Lottery.swift in Sources */,
-				9CE81EC7293E58F3009F52E1 /* LotteryViewController.swift in Sources */,
-				9CE81ED3293E5916009F52E1 /* Letter.swift in Sources */,
 				64630046293E2C84000934C6 /* RandomModesViewController.swift in Sources */,
-				9CE81EC6293E58F3009F52E1 /* NumberViewController.swift in Sources */,
 				64EE36FF2936850F0053C310 /* AppDelegate.swift in Sources */,
-				9CE81EC9293E58F3009F52E1 /* LetterViewController.swift in Sources */,
 				64EE37012936850F0053C310 /* SceneDelegate.swift in Sources */,
-				9CE81ED1293E5916009F52E1 /* Number.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9NBVCD3V3Y;
+				DEVELOPMENT_TEAM = W7Y73UQF4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AnyRandom/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AnyRandom;
@@ -408,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9NBVCD3V3Y;
+				DEVELOPMENT_TEAM = W7Y73UQF4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AnyRandom/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AnyRandom;
