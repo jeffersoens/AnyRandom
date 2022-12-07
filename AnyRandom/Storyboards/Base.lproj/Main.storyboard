@@ -62,7 +62,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getRandomNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpp-Zz-riX"/>
+                                    <action selector="generateButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpp-Zz-riX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-bF-FF8">
@@ -83,7 +83,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="copyFromAnswerLabel" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHV-gT-nfB"/>
+                                    <action selector="copyButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHV-gT-nfB"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-3E-D1c">
@@ -94,12 +94,18 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="cry-CZ-TsH"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1000" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KnU-9G-R3E">
                                         <rect key="frame" x="0.0" y="55" width="319" height="34"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="pG7-Zr-Bqy"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -126,10 +132,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Число" image="123.rectangle.fill" catalog="system" id="zed-15-ZqD"/>
                     <connections>
-                        <outlet property="answerLabel" destination="uhD-bF-FF8" id="1Ow-Q2-AOJ"/>
                         <outlet property="copyButton" destination="74j-a9-Tap" id="sJx-rk-cL9"/>
-                        <outlet property="maximumTextField" destination="KnU-9G-R3E" id="YRI-ln-0ct"/>
-                        <outlet property="minimumTextField" destination="gnE-0g-z8L" id="Nlv-C8-agv"/>
+                        <outlet property="maximumTF" destination="KnU-9G-R3E" id="YRI-ln-0ct"/>
+                        <outlet property="minimumTF" destination="gnE-0g-z8L" id="Nlv-C8-agv"/>
+                        <outlet property="resultLabel" destination="uhD-bF-FF8" id="1Ow-Q2-AOJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,7 +145,7 @@
         <!--Да или нет-->
         <scene sceneID="Gug-RD-rJP">
             <objects>
-                <viewController id="Xnn-2K-wfO" customClass="PredictViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xnn-2K-wfO" customClass="QuestionViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKa-4U-FjP">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +160,9 @@
                                 <rect key="frame" x="16" y="181" width="384" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" smartInsertDeleteType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Xnn-2K-wfO" id="21f-75-w7c"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf4-Sw-CaB">
                                 <rect key="frame" x="127.66666666666669" y="245" width="175" height="50"/>
@@ -173,7 +182,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="letKnowAnswer" destination="Xnn-2K-wfO" eventType="touchUpInside" id="tuC-OZ-wPr"/>
+                                    <action selector="getAnswerButtonTapped" destination="Xnn-2K-wfO" eventType="touchUpInside" id="tuC-OZ-wPr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6S-Ce-AjS">
@@ -209,9 +218,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Да или нет" image="circle.righthalf.filled" catalog="system" id="hgf-Av-xNR"/>
                     <connections>
-                        <outlet property="describeLabel" destination="J6S-Ce-AjS" id="v4D-Qd-aUE"/>
+                        <outlet property="answerLabel" destination="J6S-Ce-AjS" id="v4D-Qd-aUE"/>
                         <outlet property="emojiLabel" destination="fdo-HH-4Iw" id="cgZ-Ey-CoC"/>
-                        <outlet property="quesionTextField" destination="wEP-2L-DWa" id="4S6-kl-wjx"/>
+                        <outlet property="questionTF" destination="wEP-2L-DWa" id="4S6-kl-wjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cW-g7-g6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -221,7 +230,7 @@
         <!--Цвет-->
         <scene sceneID="asa-cH-bfa">
             <objects>
-                <viewController id="naf-jy-KON" customClass="RandomColorViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="naf-jy-KON" customClass="ColorViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6O-ow-T57">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,7 +487,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="copyFromAnswerLabel" destination="JoS-Kh-KjC" eventType="touchUpInside" id="HDA-4U-V0c"/>
+                                            <action selector="copyButtonTapped" destination="JoS-Kh-KjC" eventType="touchUpInside" id="HDA-4U-V0c"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -502,7 +511,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="makeLetter" destination="JoS-Kh-KjC" eventType="touchUpInside" id="xq0-48-EDb"/>
+                                    <action selector="generateButtonTapped" destination="JoS-Kh-KjC" eventType="touchUpInside" id="xq0-48-EDb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -521,10 +530,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Случайная буква" id="nX6-Ec-D62"/>
                     <connections>
-                        <outlet property="answerLabel" destination="kGY-wD-dAC" id="00Q-S1-VMk"/>
                         <outlet property="copyButton" destination="ySM-Ac-ANu" id="f5b-n0-bSI"/>
-                        <outlet property="languageChoseControl" destination="rVv-h0-edR" id="MV3-Kv-6dd"/>
-                        <outlet property="sizeChoseControl" destination="DLC-py-RS4" id="Pbc-Zt-PP5"/>
+                        <outlet property="languageControl" destination="rVv-h0-edR" id="MV3-Kv-6dd"/>
+                        <outlet property="resultLabel" destination="kGY-wD-dAC" id="00Q-S1-VMk"/>
+                        <outlet property="sizeControl" destination="DLC-py-RS4" id="Pbc-Zt-PP5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQ2-9i-Zpk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -534,7 +543,7 @@
         <!--Составить команды-->
         <scene sceneID="hAb-mt-mst">
             <objects>
-                <viewController id="EK5-H4-fwZ" customClass="CreateTeamsViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EK5-H4-fwZ" customClass="TeamsViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HJg-Yz-igK">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -555,6 +564,9 @@
                                 <rect key="frame" x="16" y="253" width="398" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EK5-H4-fwZ" id="Cve-kb-1Ff"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" placeholder="2" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-qv-Mc5">
                                 <rect key="frame" x="16" y="349" width="70" height="34"/>
@@ -563,6 +575,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EK5-H4-fwZ" id="CmK-Tl-OU6"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f2-fr-2i9">
                                 <rect key="frame" x="16" y="413" width="168" height="50"/>
@@ -660,7 +675,7 @@
         <!--Случайное слово-->
         <scene sceneID="QOu-6a-yNR">
             <objects>
-                <viewController id="bIG-9R-J0o" customClass="RandomWordViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bIG-9R-J0o" customClass="WordViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VLr-H9-9A2">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -675,6 +690,9 @@
                                 <rect key="frame" x="16" y="231.66666666666666" width="398" height="33.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bIG-9R-J0o" id="I9R-GW-5hs"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-xD-WfG">
                                 <rect key="frame" x="120" y="295.66666666666669" width="190" height="50"/>
@@ -778,7 +796,7 @@
                         <outlet property="copyButton" destination="BCU-h8-Dy6" id="wnz-Cg-DMt"/>
                         <outlet property="resultLabel" destination="HnD-Uf-Ub3" id="eDI-PA-ty4"/>
                         <outlet property="resultTitleLabel" destination="YDU-bd-EVo" id="MoL-Ln-JHd"/>
-                        <outlet property="wordsLabel" destination="zre-vm-b8H" id="ywp-Aw-6Js"/>
+                        <outlet property="wordsTF" destination="zre-vm-b8H" id="ywp-Aw-6Js"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkc-Dt-ozQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -824,12 +842,18 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ttL-by-p1y" id="ZwA-aE-PCO"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="16" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8rx-Iy-MFc">
                                                 <rect key="frame" x="0.0" y="55" width="100" height="34"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ttL-by-p1y" id="pDK-ni-TuQ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -857,7 +881,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getTime" destination="ttL-by-p1y" eventType="touchUpInside" id="izW-Zx-szz"/>
+                                    <action selector="generateButtonTapped" destination="ttL-by-p1y" eventType="touchUpInside" id="izW-Zx-szz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:41" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rVo-If-9eC">
@@ -878,7 +902,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="copyFromAnswerLabel" destination="ttL-by-p1y" eventType="touchUpInside" id="2Oc-fu-Dgm"/>
+                                    <action selector="copyButtonTapped" destination="ttL-by-p1y" eventType="touchUpInside" id="2Oc-fu-Dgm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -898,10 +922,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Случайное время" id="IfV-fy-Lvt"/>
                     <connections>
-                        <outlet property="answerLabel" destination="rVo-If-9eC" id="ja4-oc-ZQX"/>
                         <outlet property="copyButton" destination="BzA-CT-0ex" id="dAt-PR-gni"/>
-                        <outlet property="maximumTextField" destination="8rx-Iy-MFc" id="eSs-wi-Lst"/>
-                        <outlet property="minimumTextField" destination="FHm-g7-9gD" id="aR2-mD-ccs"/>
+                        <outlet property="maximumTF" destination="8rx-Iy-MFc" id="eSs-wi-Lst"/>
+                        <outlet property="minimumTF" destination="FHm-g7-9gD" id="aR2-mD-ccs"/>
+                        <outlet property="resultLabel" destination="rVo-If-9eC" id="ja4-oc-ZQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvh-lv-egT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -944,12 +968,18 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jc1-aC-MDA" id="t3e-gt-ehE"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JoJ-r1-gGy">
                                         <rect key="frame" x="0.0" y="55" width="333" height="34"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jc1-aC-MDA" id="tLQ-sz-2l5"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -984,7 +1014,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getNumbers" destination="jc1-aC-MDA" eventType="touchUpInside" id="7zo-5x-l7E"/>
+                                    <action selector="generateButtonTapped" destination="jc1-aC-MDA" eventType="touchUpInside" id="7zo-5x-l7E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ответы" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0s-Jx-RQ2">
@@ -1001,6 +1031,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jc1-aC-MDA" id="pBb-qi-iIh"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIe-ne-chP">
                                 <rect key="frame" x="93.333333333333314" y="504" width="136" height="23"/>
@@ -1014,7 +1047,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="copyFromAnswerLabel" destination="jc1-aC-MDA" eventType="touchUpInside" id="0yt-ee-Hx1"/>
+                                    <action selector="copyButtonTapped" destination="jc1-aC-MDA" eventType="touchUpInside" id="0yt-ee-Hx1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1049,11 +1082,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Лотерея" id="jdl-zD-qSp"/>
                     <connections>
-                        <outlet property="answerLabel" destination="I0s-Jx-RQ2" id="HGZ-8B-gAQ"/>
                         <outlet property="copyButton" destination="kIe-ne-chP" id="RlL-bg-tkV"/>
-                        <outlet property="countTextField" destination="Xvk-1s-cd8" id="Osc-ns-8Ul"/>
-                        <outlet property="maximumTextField" destination="JoJ-r1-gGy" id="Io7-dL-la7"/>
-                        <outlet property="minimumTextField" destination="YYr-rB-r5V" id="cIs-ff-L16"/>
+                        <outlet property="countTF" destination="Xvk-1s-cd8" id="Osc-ns-8Ul"/>
+                        <outlet property="maximumTF" destination="JoJ-r1-gGy" id="Io7-dL-la7"/>
+                        <outlet property="minimumTF" destination="YYr-rB-r5V" id="cIs-ff-L16"/>
+                        <outlet property="resultLabel" destination="I0s-Jx-RQ2" id="HGZ-8B-gAQ"/>
                         <outlet property="titleLabel" destination="E3q-1c-dfw" id="CsE-5b-Cci"/>
                     </connections>
                 </viewController>

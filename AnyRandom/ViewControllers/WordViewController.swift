@@ -7,15 +7,18 @@
 
 import UIKit
 
-class RandomWordViewController: UIViewController {
+class WordViewController: UIViewController {
     
+    // MARK: - IB Outlets
     
-    @IBOutlet weak var wordsLabel: UITextField!
+    @IBOutlet weak var wordsTF: UITextField!
     
     @IBOutlet weak var resultTitleLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var copyButton: UIButton!
+    
+    // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +33,13 @@ class RandomWordViewController: UIViewController {
         view.endEditing(true)
     }
     
+    // MARK: - IB Actions
     
     @IBAction func randomWordButtonTapped() {
         
-        var words: [String] = wordsLabel.text?.components(separatedBy: ",") ?? []
+        var words: [String] = wordsTF.text?.components(separatedBy: ",") ?? []
         
-        if wordsLabel.text!.isEmpty {
+        if wordsTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
                 message: "Пожалуйста, введите набор слов",
@@ -55,9 +59,9 @@ class RandomWordViewController: UIViewController {
     
     @IBAction func shuffleWordsButtonTapped() {
         
-        let words: [String] = wordsLabel.text?.components(separatedBy: ",") ?? []
+        let words: [String] = wordsTF.text?.components(separatedBy: ",") ?? []
         
-        if wordsLabel.text!.isEmpty {
+        if wordsTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
                 message: "Пожалуйста, введите набор слов",
@@ -83,9 +87,24 @@ class RandomWordViewController: UIViewController {
         
     }
     
-    
     @IBAction func copyButtonTapped() {
         copyText(for: resultLabel)
     }
-    
 }
+
+// MARK: - Text Field Delegate
+
+extension WordViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case wordsTF:
+            randomWordButtonTapped()
+            view.endEditing(true)
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+} 

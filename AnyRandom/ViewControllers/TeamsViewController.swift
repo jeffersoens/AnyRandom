@@ -7,9 +7,9 @@
 
 import UIKit
 
-class CreateTeamsViewController: UIViewController {
+class TeamsViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    // MARK: - IB Outlets
     
     @IBOutlet weak var teamMembersTF: UITextField!
     @IBOutlet weak var numberOfTeamsTF: UITextField!
@@ -34,7 +34,7 @@ class CreateTeamsViewController: UIViewController {
         view.endEditing(true)
     }
     
-    // MARK: - IBActions
+    // MARK: - IB Actions
     
     @IBAction func generateButtonTapped() {
         
@@ -98,11 +98,12 @@ class CreateTeamsViewController: UIViewController {
         for (number, result) in results.enumerated() {
             resultLabel.text! += "Команда \(number + 1): \(result.formatted())\n"
         }
-
+        
         resultTitleLabel.isHidden = false
         resultLabel.isHidden = false
         copyButton.isHidden = false
         
+        view.endEditing(true)
     }
     
     @IBAction func copyButtonTapped() {
@@ -111,7 +112,7 @@ class CreateTeamsViewController: UIViewController {
     
 }
 
-// MARK: - Splitting an array into smaller arrays by size
+// MARK: - Splitting an Array Into Smaller Arrays by Size
 
 // https://www.hackingwithswift.com/example-code/language/how-to-split-an-array-into-chunks
 extension Array {
@@ -121,3 +122,19 @@ extension Array {
         }
     }
 }
+
+// MARK: - Text Field Delegate
+
+extension TeamsViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case teamMembersTF:
+            numberOfTeamsTF.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+} 

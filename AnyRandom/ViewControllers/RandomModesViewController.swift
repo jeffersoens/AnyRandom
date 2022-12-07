@@ -13,29 +13,39 @@ class RandomModesViewController: UITableViewController {
     
     private let randomModes = RandomMode.getRandomModes()
     
-    // MARK: - viewDidLoad
-
+    // MARK: - Override Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.rowHeight = 80
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+            backItem.title = "Назад"
+            navigationItem.backBarButtonItem = backItem
+    }
+    
     // MARK: - Table View Data Source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         randomModes.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "randomMode", for: indexPath)
         let randomMode = randomModes[indexPath.row]
+        
         var content = cell.defaultContentConfiguration()
         content.text = randomMode.title
         content.secondaryText = randomMode.description
         content.image = UIImage(named: randomMode.image)
         content.imageProperties.maximumSize = CGSize(width: 40, height: 40)
+        
         cell.contentConfiguration = content
+        
         return cell
     }
     
@@ -45,5 +55,5 @@ class RandomModesViewController: UITableViewController {
         let randomMode = randomModes[indexPath.row]
         performSegue(withIdentifier: randomMode.segueIdentifier, sender: nil)
     }
-
-}
+    
+} 

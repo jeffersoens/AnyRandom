@@ -20,4 +20,4 @@ enum Emoji: Character {
             return "Спросите позже"
         }
     }
-}
+} 

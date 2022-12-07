@@ -9,18 +9,21 @@ import UIKit
 
 class NumberViewController: UIViewController {
     
-// MARK: - IB Outlets
-    @IBOutlet var minimumTextField: UITextField!
-    @IBOutlet var maximumTextField: UITextField!
+    // MARK: - IB Outlets
+    
+    @IBOutlet var minimumTF: UITextField!
+    @IBOutlet var maximumTF: UITextField!
     
     @IBOutlet var copyButton: UIButton!
     
-    @IBOutlet var answerLabel: UILabel!
+    @IBOutlet var resultLabel: UILabel!
     
-// MARK: - Life Cycles Methods
+    // MARK: - Override Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerLabel.text = ""
+        
+        resultLabel.text = ""
         copyButton.isHidden = true
     }
     
@@ -29,29 +32,59 @@ class NumberViewController: UIViewController {
         view.endEditing(true)
     }
     
-// MARK: - IB Actions
-    @IBAction func copyFromAnswerLabel() {
-        copyText(for: answerLabel)
+    // MARK: - IB Actions
+    @IBAction func copyButtonTapped() {
+        copyText(for: resultLabel)
     }
     
-    @IBAction func getRandomNumber() {
+    @IBAction func generateButtonTapped() {
+        
+        if minimumTF.text!.isEmpty && maximumTF.text!.isEmpty {
+            showAlert(
+                title: "Введите данные",
+                message: "Пожалуйста, введите диапазон",
+                actionTitle: "ОК"
+            )
+            return
+        }
+        
+        if minimumTF.text!.isEmpty {
+            showAlert(
+                title: "Введите данные",
+                message: "Пожалуйста, введите минимальное значение",
+                actionTitle: "ОК"
+            )
+            return
+        }
+        
+        if maximumTF.text!.isEmpty {
+            showAlert(
+                title: "Введите данные",
+                message: "Пожалуйста, введите максимальное значение",
+                actionTitle: "ОК"
+            )
+            return
+        }
+        
         copyButton.isHidden = false
         
-        let minimumNumber = Int(minimumTextField.text ?? "") ?? 100
-        let maximumNumber = Int(maximumTextField.text ?? "") ?? 0
+        let minimumNumber = Int(minimumTF.text ?? "") ?? 100
+        let maximumNumber = Int(maximumTF.text ?? "") ?? 0
         
         if minimumNumber <= maximumNumber {
-            answerLabel.text = Int.random(in: minimumNumber...maximumNumber).formatted()
+            resultLabel.text = Int.random(in: minimumNumber...maximumNumber).formatted()
         } else {
             showAlert(
                 title: "Неверный диапазон",
-                message: "Проверьте корректность введённого диапазона",
-                actionTitle: "Ок"
+                message: "Максимальное значение не может быть меньше минимального значения",
+                actionTitle: "ОK"
             )
-            minimumTextField.text = ""
-            maximumTextField.text = ""
-            answerLabel.text = ""
+            
+            maximumTF.text = ""
+            resultLabel.text = ""
             copyButton.isHidden = true
         }
+        
+        view.endEditing(true)
     }
-}
+} 

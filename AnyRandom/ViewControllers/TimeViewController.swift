@@ -6,21 +6,24 @@
 //
 
 import UIKit
- 
+
 class TimeViewController: UIViewController {
     
-// MARK: - IB Outlets
-    @IBOutlet var minimumTextField: UITextField!
-    @IBOutlet var maximumTextField: UITextField!
+    // MARK: - IB Outlets
+    
+    @IBOutlet var minimumTF: UITextField!
+    @IBOutlet var maximumTF: UITextField!
     
     @IBOutlet var copyButton: UIButton!
     
-    @IBOutlet var answerLabel: UILabel!
+    @IBOutlet var resultLabel: UILabel!
     
-// MARK: - Life Cycles Methods
+    // MARK: - Override Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerLabel.text = ""
+        
+        resultLabel.text = ""
         copyButton.isHidden = true
     }
     
@@ -29,14 +32,15 @@ class TimeViewController: UIViewController {
         view.endEditing(true)
     }
     
-//MARK: - IB Actions
-    @IBAction func copyFromAnswerLabel() {
-        copyText(for: answerLabel)
+    //MARK: - IB Actions
+    
+    @IBAction func copyButtonTapped() {
+        copyText(for: resultLabel)
     }
     
-    @IBAction func getTime() {
+    @IBAction func generateButtonTapped() {
         
-        if minimumTextField.text!.isEmpty && maximumTextField.text!.isEmpty {
+        if minimumTF.text!.isEmpty && maximumTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
                 message: "Пожалуйста, укажите минимальное и максимальное время",
@@ -45,7 +49,7 @@ class TimeViewController: UIViewController {
             return
         }
         
-        if minimumTextField.text!.isEmpty {
+        if minimumTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
                 message: "Пожалуйста, укажите минимальное время",
@@ -54,7 +58,7 @@ class TimeViewController: UIViewController {
             return
         }
         
-        if maximumTextField.text!.isEmpty {
+        if maximumTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
                 message: "Пожалуйста, укажите максимальное время",
@@ -65,23 +69,25 @@ class TimeViewController: UIViewController {
         
         copyButton.isHidden = false
         
-        let minimumNumber = Int(minimumTextField.text ?? "") ?? 0
-        let maximumNumber = Int(maximumTextField.text ?? "") ?? 24
+        let minimumNumber = Int(minimumTF.text ?? "") ?? 0
+        let maximumNumber = Int(maximumTF.text ?? "") ?? 24
         
         if minimumNumber < maximumNumber {
+            
             let hour = Int.random(in: minimumNumber..<maximumNumber)
             let minute = Int.random(in: 0...59)
+            
             if hour >= 0 && hour <= 23 {
                 if hour <= 9 {
-                    (minute <= 9) ? (answerLabel.text = "0\(hour):0\(minute)") : (answerLabel.text = "0\(hour):\(minute)")
+                    (minute <= 9) ? (resultLabel.text = "0\(hour):0\(minute)") : (resultLabel.text = "0\(hour):\(minute)")
                 } else {
-                    (minute <= 9) ? (answerLabel.text = "\(hour):0\(minute)") : (answerLabel.text = "\(hour):\(minute)")
+                    (minute <= 9) ? (resultLabel.text = "\(hour):0\(minute)") : (resultLabel.text = "\(hour):\(minute)")
                 }
             } else {
                 showAlert(
                     title: "Неверный диапазон",
                     message: "Проверьте корректность введённого диапазона",
-                    actionTitle: "Ок"
+                    actionTitle: "ОK"
                 )
                 hideElements()
             }
@@ -89,17 +95,20 @@ class TimeViewController: UIViewController {
             showAlert(
                 title: "Неверный диапазон",
                 message:"Похоже, Вы перепутали границы местами",
-                actionTitle: "Ок"
+                actionTitle: "ОK"
             )
+            
             hideElements()
         }
+        view.endEditing(true)
     }
     
-//MARK: - Private Methods
+    //MARK: - Private Methods
+    
     private func hideElements() {
-        minimumTextField.text = ""
-        maximumTextField.text = ""
-        answerLabel.text = ""
+        minimumTF.text = ""
+        maximumTF.text = ""
+        resultLabel.text = ""
         copyButton.isHidden = true
     }
-}
+} 
