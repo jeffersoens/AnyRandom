@@ -41,7 +41,7 @@ class CreateTeamsViewController: UIViewController {
         if teamMembersTF.text!.isEmpty && numberOfTeamsTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
-                message: "Пожалуйста, заполните имена участников и количество команд",
+                message: "Пожалуйста, заполните имена участников и их количество в команде",
                 actionTitle: "ОК"
             )
             return
@@ -59,16 +59,16 @@ class CreateTeamsViewController: UIViewController {
         if numberOfTeamsTF.text!.isEmpty {
             showAlert(
                 title: "Введите данные",
-                message: "Пожалуйста, укажите количество команд",
+                message: "Пожалуйста, укажите количество участников в команде",
                 actionTitle: "ОК"
             )
             return
         }
         
-        if Int(numberOfTeamsTF.text ?? "0") ?? 0 < 2 {
+        if Int(numberOfTeamsTF.text ?? "0") ?? 0 <= 0 {
             showAlert(
                 title: "Неверное количество",
-                message: "Количество команд как минимум должно равняться двум",
+                message: "Количество участников должно быть больше или равняться одному",
                 actionTitle: "ОК"
             )
             numberOfTeamsTF.text = ""
@@ -82,7 +82,7 @@ class CreateTeamsViewController: UIViewController {
         if numerOfTeams >= teamMembers.count {
             showAlert(
                 title: "Неверное количество",
-                message: "Количество команд должно быть меньше количества участников, но не меньше двух",
+                message: "Количество участиков в одной команде не может превышать общего количества участников",
                 actionTitle: "ОК"
             )
             numberOfTeamsTF.text = ""
@@ -90,8 +90,15 @@ class CreateTeamsViewController: UIViewController {
         }
         
         teamMembers.shuffle()
-        // продолжить алгоритм
         
+        let results = teamMembers.chunked(into: (numerOfTeams))
+        
+        resultLabel.text = ""
+        
+        for (number, result) in results.enumerated() {
+            resultLabel.text! += "Команда \(number + 1): \(result.formatted())\n"
+        }
+
         resultTitleLabel.isHidden = false
         resultLabel.isHidden = false
         copyButton.isHidden = false
@@ -103,6 +110,8 @@ class CreateTeamsViewController: UIViewController {
     }
     
 }
+
+// MARK: - Splitting an array into smaller arrays by size
 
 // https://www.hackingwithswift.com/example-code/language/how-to-split-an-array-into-chunks
 extension Array {

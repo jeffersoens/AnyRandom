@@ -509,13 +509,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите количество команд:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4K-vT-wbQ">
-                                <rect key="frame" x="16" y="248" width="255" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите количество людей в команде:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4K-vT-wbQ">
+                                <rect key="frame" x="16" y="248" width="341" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Лиза, Слава, Дима, Наташа..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-Cr-hMp">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Лиза,Слава,Дима,Наташа..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-Cr-hMp">
                                 <rect key="frame" x="16" y="194" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -563,7 +563,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAa-A1-rZs">
-                                <rect key="frame" x="16" y="525.5" width="136" height="23"/>
+                                <rect key="frame" x="157" y="439" width="136" height="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title=" Скопировать" image="doc.on.clipboard" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
@@ -583,18 +583,17 @@
                         <constraints>
                             <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="R4K-vT-wbQ" secondAttribute="trailing" symbolic="YES" id="1yo-ic-ufE"/>
                             <constraint firstItem="IZX-Cr-hMp" firstAttribute="top" secondItem="Drl-Ma-VyW" secondAttribute="bottom" constant="20" id="6H4-QG-sdj"/>
+                            <constraint firstItem="IAa-A1-rZs" firstAttribute="leading" secondItem="8Sb-Z4-wD9" secondAttribute="trailing" constant="15" id="8sy-H1-oVe"/>
                             <constraint firstItem="IZX-Cr-hMp" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="AYC-6I-006"/>
                             <constraint firstItem="R4K-vT-wbQ" firstAttribute="top" secondItem="IZX-Cr-hMp" secondAttribute="bottom" constant="20" id="GAS-Bm-PUy"/>
                             <constraint firstItem="3f2-fr-2i9" firstAttribute="top" secondItem="KVd-qv-Mc5" secondAttribute="bottom" constant="30" id="JSS-ir-7wC"/>
                             <constraint firstItem="RVU-3G-do3" firstAttribute="top" secondItem="8Sb-Z4-wD9" secondAttribute="bottom" constant="20" id="Kjh-aZ-H8i"/>
-                            <constraint firstItem="IAa-A1-rZs" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="Nkz-2n-25d"/>
-                            <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IAa-A1-rZs" secondAttribute="trailing" symbolic="YES" id="PPC-cg-R5y"/>
+                            <constraint firstItem="how-6u-nwC" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RVU-3G-do3" secondAttribute="bottom" constant="10" id="Pee-ZE-pCp"/>
                             <constraint firstItem="8Sb-Z4-wD9" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="Q6G-CX-5kp"/>
                             <constraint firstItem="RVU-3G-do3" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="TCz-n1-BAv"/>
                             <constraint firstItem="KVd-qv-Mc5" firstAttribute="top" secondItem="R4K-vT-wbQ" secondAttribute="bottom" constant="20" id="TTA-vF-NIg"/>
-                            <constraint firstItem="IAa-A1-rZs" firstAttribute="top" secondItem="RVU-3G-do3" secondAttribute="bottom" constant="20" id="V3G-kF-jWt"/>
                             <constraint firstItem="R4K-vT-wbQ" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="Yuu-e2-775"/>
-                            <constraint firstItem="how-6u-nwC" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IAa-A1-rZs" secondAttribute="bottom" constant="20" id="bFy-zT-BYc"/>
+                            <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IAa-A1-rZs" secondAttribute="trailing" symbolic="YES" id="dmT-Ie-iju"/>
                             <constraint firstItem="Drl-Ma-VyW" firstAttribute="top" secondItem="how-6u-nwC" secondAttribute="top" constant="35" id="dnq-bG-qXc"/>
                             <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Sb-Z4-wD9" secondAttribute="trailing" symbolic="YES" id="f4r-I4-jmc"/>
                             <constraint firstItem="8Sb-Z4-wD9" firstAttribute="top" secondItem="3f2-fr-2i9" secondAttribute="bottom" constant="30" id="fFM-t1-kUZ"/>
@@ -603,6 +602,7 @@
                             <constraint firstItem="KVd-qv-Mc5" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="pDW-we-VHV"/>
                             <constraint firstItem="Drl-Ma-VyW" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="pSh-ff-cuy"/>
                             <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3f2-fr-2i9" secondAttribute="trailing" symbolic="YES" id="rng-AC-weB"/>
+                            <constraint firstItem="IAa-A1-rZs" firstAttribute="top" secondItem="3f2-fr-2i9" secondAttribute="bottom" constant="35" id="tzw-GY-AfQ"/>
                             <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KVd-qv-Mc5" secondAttribute="trailing" symbolic="YES" id="wCO-9L-mu6"/>
                             <constraint firstItem="3f2-fr-2i9" firstAttribute="leading" secondItem="how-6u-nwC" secondAttribute="leading" constant="16" id="wNQ-2S-esw"/>
                             <constraint firstItem="how-6u-nwC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Drl-Ma-VyW" secondAttribute="trailing" symbolic="YES" id="ygQ-Ub-cfb"/>
@@ -619,29 +619,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lho-IG-bqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4343.7209302325582" y="1643.5622317596567"/>
+            <point key="canvasLocation" x="4343.1999999999998" y="1643.0284857571216"/>
         </scene>
         <!--Случайное слово-->
         <scene sceneID="QOu-6a-yNR">
             <objects>
-                <viewController id="bIG-9R-J0o" sceneMemberID="viewController">
+                <viewController id="bIG-9R-J0o" customClass="RandomWordViewController" customModule="AnyRandom" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VLr-H9-9A2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите слова через запятую:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhY-2r-VMg">
-                                <rect key="frame" x="16" y="131" width="268" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите слова через запятую без пробелов:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhY-2r-VMg">
+                                <rect key="frame" x="16" y="131" width="267" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дом, собака, апельсин, окно..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zre-vm-b8H">
-                                <rect key="frame" x="16" y="172.5" width="343" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="дом,собака,апельсин,окно..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zre-vm-b8H">
+                                <rect key="frame" x="16" y="194" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-xD-WfG">
-                                <rect key="frame" x="92.5" y="236.5" width="190" height="50"/>
+                                <rect key="frame" x="92.5" y="258" width="190" height="50"/>
                                 <color key="backgroundColor" red="0.18733119500000001" green="0.71979166670000005" blue="0.32044631289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="YXf-QE-GKI"/>
@@ -658,9 +658,12 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="randomWordButtonTapped" destination="bIG-9R-J0o" eventType="touchUpInside" id="cj2-mW-QSB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-5h-dn1">
-                                <rect key="frame" x="92.5" y="306.5" width="190" height="50"/>
+                                <rect key="frame" x="92.5" y="328" width="190" height="50"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="NGS-KE-qHH"/>
@@ -677,21 +680,24 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shuffleWordsButtonTapped" destination="bIG-9R-J0o" eventType="touchUpInside" id="azR-KI-oNl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDU-bd-EVo">
-                                <rect key="frame" x="16" y="386.5" width="126" height="30"/>
+                                <rect key="frame" x="16" y="408" width="126" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово или слова" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnD-Uf-Ub3">
-                                <rect key="frame" x="16" y="436.5" width="343" height="21.5"/>
+                                <rect key="frame" x="16" y="458" width="343" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCU-h8-Dy6">
-                                <rect key="frame" x="16" y="478" width="136" height="23"/>
+                                <rect key="frame" x="157" y="413" width="136" height="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title=" Скопировать" image="doc.on.clipboard" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
@@ -701,6 +707,9 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyButtonTapped" destination="bIG-9R-J0o" eventType="touchUpInside" id="wne-ck-Abx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ntr-1Y-kko"/>
@@ -711,24 +720,30 @@
                             <constraint firstItem="Ntr-1Y-kko" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uhY-2r-VMg" secondAttribute="trailing" symbolic="YES" id="4bI-Kb-erY"/>
                             <constraint firstItem="Ntr-1Y-kko" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YDU-bd-EVo" secondAttribute="trailing" symbolic="YES" id="6iM-s0-rzQ"/>
                             <constraint firstItem="HnD-Uf-Ub3" firstAttribute="top" secondItem="YDU-bd-EVo" secondAttribute="bottom" constant="20" id="8mC-cb-8LR"/>
+                            <constraint firstItem="BCU-h8-Dy6" firstAttribute="leading" secondItem="YDU-bd-EVo" secondAttribute="trailing" constant="15" id="DmV-Jo-wSW"/>
                             <constraint firstItem="Ntr-1Y-kko" firstAttribute="trailing" secondItem="HnD-Uf-Ub3" secondAttribute="trailing" constant="16" id="Exg-b8-uwv"/>
                             <constraint firstItem="zre-vm-b8H" firstAttribute="leading" secondItem="Ntr-1Y-kko" secondAttribute="leading" constant="16" id="JY6-q3-lQs"/>
                             <constraint firstItem="uhY-2r-VMg" firstAttribute="top" secondItem="Ntr-1Y-kko" secondAttribute="top" constant="35" id="Ja9-Zk-zDq"/>
-                            <constraint firstItem="BCU-h8-Dy6" firstAttribute="top" secondItem="HnD-Uf-Ub3" secondAttribute="bottom" constant="20" id="L1I-Ei-swS"/>
-                            <constraint firstItem="Ntr-1Y-kko" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BCU-h8-Dy6" secondAttribute="bottom" constant="20" id="Qat-Ts-JVP"/>
                             <constraint firstItem="YDU-bd-EVo" firstAttribute="top" secondItem="1ZP-5h-dn1" secondAttribute="bottom" constant="30" id="R1W-B7-OnN"/>
                             <constraint firstItem="1ZP-5h-dn1" firstAttribute="centerX" secondItem="VLr-H9-9A2" secondAttribute="centerX" id="YSN-hL-0Jf"/>
                             <constraint firstItem="YDU-bd-EVo" firstAttribute="leading" secondItem="Ntr-1Y-kko" secondAttribute="leading" constant="16" id="cIT-RU-dbo"/>
                             <constraint firstItem="Hhf-xD-WfG" firstAttribute="centerX" secondItem="VLr-H9-9A2" secondAttribute="centerX" id="dLm-KH-pRJ"/>
+                            <constraint firstItem="Ntr-1Y-kko" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BCU-h8-Dy6" secondAttribute="trailing" symbolic="YES" id="dug-bb-XXb"/>
+                            <constraint firstItem="BCU-h8-Dy6" firstAttribute="top" secondItem="1ZP-5h-dn1" secondAttribute="bottom" constant="35" id="fSk-HO-Sv8"/>
+                            <constraint firstItem="Ntr-1Y-kko" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HnD-Uf-Ub3" secondAttribute="bottom" constant="10" id="kt8-ZS-FEK"/>
                             <constraint firstItem="1ZP-5h-dn1" firstAttribute="top" secondItem="Hhf-xD-WfG" secondAttribute="bottom" constant="20" id="nZl-PY-8s8"/>
                             <constraint firstItem="Ntr-1Y-kko" firstAttribute="trailing" secondItem="zre-vm-b8H" secondAttribute="trailing" constant="16" id="qEn-Ux-V4z"/>
-                            <constraint firstItem="Ntr-1Y-kko" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BCU-h8-Dy6" secondAttribute="trailing" symbolic="YES" id="rHC-Cc-Y77"/>
                             <constraint firstItem="uhY-2r-VMg" firstAttribute="leading" secondItem="Ntr-1Y-kko" secondAttribute="leading" constant="16" id="u9X-3Z-mHu"/>
                             <constraint firstItem="zre-vm-b8H" firstAttribute="top" secondItem="uhY-2r-VMg" secondAttribute="bottom" constant="20" id="why-3R-0eE"/>
-                            <constraint firstItem="BCU-h8-Dy6" firstAttribute="leading" secondItem="Ntr-1Y-kko" secondAttribute="leading" constant="16" id="xIk-Ga-Gll"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Случайное слово" id="9hD-fn-RcS"/>
+                    <connections>
+                        <outlet property="copyButton" destination="BCU-h8-Dy6" id="wnz-Cg-DMt"/>
+                        <outlet property="resultLabel" destination="HnD-Uf-Ub3" id="eDI-PA-ty4"/>
+                        <outlet property="resultTitleLabel" destination="YDU-bd-EVo" id="MoL-Ln-JHd"/>
+                        <outlet property="wordsLabel" destination="zre-vm-b8H" id="ywp-Aw-6Js"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkc-Dt-ozQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -927,8 +942,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xvk-1s-cd8">
+                                <rect key="frame" x="16" y="295" width="343" height="34"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIe-ne-chP">
-                                <rect key="frame" x="16" y="530.5" width="136" height="23"/>
+                                <rect key="frame" x="93.5" y="444" width="136" height="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title=" Скопировать" image="doc.on.clipboard" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
@@ -939,32 +960,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xvk-1s-cd8">
-                                <rect key="frame" x="16" y="295" width="343" height="34"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L2B-jx-FMf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="L2B-jx-FMf" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="I0s-Jx-RQ2" secondAttribute="bottom" constant="10" id="1Ib-Gb-rzW"/>
                             <constraint firstItem="E3q-1c-dfw" firstAttribute="top" secondItem="jsm-i3-Yjm" secondAttribute="bottom" constant="30" id="5NT-L9-RjF"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jsm-i3-Yjm" secondAttribute="trailing" symbolic="YES" id="AKA-Jh-GNq"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E3q-1c-dfw" secondAttribute="trailing" symbolic="YES" id="AOS-Za-3ch"/>
                             <constraint firstItem="I0s-Jx-RQ2" firstAttribute="top" secondItem="E3q-1c-dfw" secondAttribute="bottom" constant="20" id="CKr-BS-XEv"/>
                             <constraint firstItem="jsm-i3-Yjm" firstAttribute="centerX" secondItem="kwg-3p-p7V" secondAttribute="centerX" id="Fr6-V6-rBC"/>
-                            <constraint firstItem="kIe-ne-chP" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="FyY-Xz-dqi"/>
-                            <constraint firstItem="kIe-ne-chP" firstAttribute="top" secondItem="I0s-Jx-RQ2" secondAttribute="bottom" constant="20" id="Gtz-gd-ieB"/>
+                            <constraint firstItem="kIe-ne-chP" firstAttribute="top" secondItem="jsm-i3-Yjm" secondAttribute="bottom" constant="35" id="I0r-pH-y2z"/>
                             <constraint firstItem="Xvk-1s-cd8" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="OwX-Vm-pd2"/>
                             <constraint firstItem="jsm-i3-Yjm" firstAttribute="top" secondItem="Xvk-1s-cd8" secondAttribute="bottom" constant="30" id="QcV-2g-eGg"/>
                             <constraint firstItem="I0s-Jx-RQ2" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="WfW-9c-YtF"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" secondItem="I0s-Jx-RQ2" secondAttribute="trailing" constant="16" id="XE9-6S-hWN"/>
                             <constraint firstItem="jN7-Ee-W3r" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="Xs8-dH-xvA"/>
+                            <constraint firstItem="kIe-ne-chP" firstAttribute="leading" secondItem="E3q-1c-dfw" secondAttribute="trailing" constant="15" id="ZMY-Lp-e42"/>
                             <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" secondItem="PZ9-RR-cyO" secondAttribute="trailing" constant="16" id="d3H-0D-YP2"/>
-                            <constraint firstItem="L2B-jx-FMf" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kIe-ne-chP" secondAttribute="bottom" constant="20" id="dJV-0z-xkg"/>
                             <constraint firstItem="jN7-Ee-W3r" firstAttribute="top" secondItem="L2B-jx-FMf" secondAttribute="top" constant="35" id="dQP-pB-bBt"/>
-                            <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kIe-ne-chP" secondAttribute="trailing" symbolic="YES" id="hXT-ax-OTK"/>
+                            <constraint firstItem="L2B-jx-FMf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kIe-ne-chP" secondAttribute="trailing" symbolic="YES" id="eQv-s9-f3q"/>
                             <constraint firstItem="fbG-S0-axp" firstAttribute="leading" secondItem="L2B-jx-FMf" secondAttribute="leading" constant="16" id="hv6-XU-gAQ"/>
                             <constraint firstItem="Xvk-1s-cd8" firstAttribute="top" secondItem="fbG-S0-axp" secondAttribute="bottom" constant="20" id="iqs-dA-KN6"/>
                             <constraint firstItem="PZ9-RR-cyO" firstAttribute="leading" secondItem="jN7-Ee-W3r" secondAttribute="trailing" constant="20" id="k9g-cv-5XU"/>

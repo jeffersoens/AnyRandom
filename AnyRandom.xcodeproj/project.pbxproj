@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64085B0B2940CBB400DB6F2C /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64085B0A2940CBB400DB6F2C /* RandomWordViewController.swift */; };
 		6417EB3A293F7D090031C54D /* RandomColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB39293F7D090031C54D /* RandomColorViewController.swift */; };
 		6417EB3C293F94240031C54D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB3B293F94240031C54D /* Alerts.swift */; };
 		6417EB3F293FA09C0031C54D /* CreateTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB3E293FA09C0031C54D /* CreateTeamsViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64085B0A2940CBB400DB6F2C /* RandomWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
 		6417EB39293F7D090031C54D /* RandomColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorViewController.swift; sourceTree = "<group>"; };
 		6417EB3B293F94240031C54D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		6417EB3E293FA09C0031C54D /* CreateTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamsViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				64630045293E2C84000934C6 /* RandomModesViewController.swift */,
 				6417EB39293F7D090031C54D /* RandomColorViewController.swift */,
 				6417EB3E293FA09C0031C54D /* CreateTeamsViewController.swift */,
+				64085B0A2940CBB400DB6F2C /* RandomWordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				6417EB3A293F7D090031C54D /* RandomColorViewController.swift in Sources */,
 				64EE36FF2936850F0053C310 /* AppDelegate.swift in Sources */,
 				6417EB3C293F94240031C54D /* Alerts.swift in Sources */,
+				64085B0B2940CBB400DB6F2C /* RandomWordViewController.swift in Sources */,
 				64EE37012936850F0053C310 /* SceneDelegate.swift in Sources */,
 				6417EB3F293FA09C0031C54D /* CreateTeamsViewController.swift in Sources */,
 			);
