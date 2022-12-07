@@ -122,4 +122,4 @@ class LotteryViewController: UIViewController {
         }
         view.endEditing(true)
     }
-}
+} 

@@ -56,4 +56,4 @@ class RandomModesViewController: UITableViewController {
         performSegue(withIdentifier: randomMode.segueIdentifier, sender: nil)
     }
     
-}
+} 

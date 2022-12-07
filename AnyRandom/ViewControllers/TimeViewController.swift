@@ -111,4 +111,4 @@ class TimeViewController: UIViewController {
         resultLabel.text = ""
         copyButton.isHidden = true
     }
-}
+} 
