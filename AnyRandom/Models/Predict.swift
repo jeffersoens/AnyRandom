@@ -5,11 +5,6 @@
 //  Created by Дмитрий Селезнев on 03.12.2022.
 //
 
-//struct Answers {
-//    let emoji: Emoji
-////    let describe: String
-//}
- 
 enum Emoji: Character {
     case yes = "👍🏻"
     case no = "👎🏻"
@@ -18,11 +13,11 @@ enum Emoji: Character {
     var describe: String {
         switch self {
         case .yes:
-            return "Определенно да!"
+            return "Да, тебе стоит "
         case .no:
-            return "Точно не надо!"
+            return "Нет, тебе не стоит "
         case .dontKnow:
-            return "Так и не скажешь..."
+            return "Спросите позже"
         }
     }
 }

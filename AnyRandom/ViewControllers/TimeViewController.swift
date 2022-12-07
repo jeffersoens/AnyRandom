@@ -17,24 +17,21 @@ class TimeViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     
-// MARK: - Private Properties
-    private let pasteboard = UIPasteboard.general
-    
 // MARK: - Life Cycles Methods
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         answerLabel.text = ""
         copyButton.isHidden = true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
 //MARK: - IB Actions
     @IBAction func copyFromAnswerLabel() {
-        //copyText(for: answerLabel) Раскомментить
+        copyText(for: answerLabel)
     }
     
     @IBAction func getTime() {
@@ -53,31 +50,28 @@ class TimeViewController: UIViewController {
                     (minute <= 9) ? (answerLabel.text = "\(hour):0\(minute)") : (answerLabel.text = "\(hour):\(minute)")
                 }
             } else {
-                /* Раскомментить
                 showAlert(
-                    title: "Упс... Ошибочка",
-                    message: "Похоже Вы вышли за рамки границ",
+                    title: "Неверный диапазон",
+                    message: "Проверьте корректность введённого диапазона",
                     actionTitle: "Ок"
                 )
-                minimumTextField.text = ""
-                maximumTextField.text = ""
-                answerLabel.text = ""
-                copyButton.isHidden = true
-                */
+                hideElements()
             }
         } else {
-            /* Раскомментить
             showAlert(
-                title: "Упс... Ошибочка",
-                message:"Похоже Вы перепутали местами границы",
+                title: "Неверный диапазон",
+                message:"Похоже, Вы перепутали границы местами",
                 actionTitle: "Ок"
             )
-            minimumTextField.text = ""
-            maximumTextField.text = ""
-            answerLabel.text = ""
-            copyButton.isHidden = true
-             */
+            hideElements()
         }
     }
     
+//MARK: - Private Methods
+    private func hideElements() {
+        minimumTextField.text = ""
+        maximumTextField.text = ""
+        answerLabel.text = ""
+        copyButton.isHidden = true
+    }
 }

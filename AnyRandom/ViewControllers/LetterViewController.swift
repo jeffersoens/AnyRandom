@@ -17,9 +17,6 @@ class LetterViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     
-//MARK: - Private Properties
-    private let pasteboard = UIPasteboard.general
-    
 // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +26,7 @@ class LetterViewController: UIViewController {
     
 // MARK: - IB Actions
     @IBAction func copyFromAnswerLabel() {
-        //copyText(for: answerLabel) Раскомментить
+        copyText(for: answerLabel)
     }
     
     @IBAction func makeLetter() {
@@ -54,4 +51,3 @@ class LetterViewController: UIViewController {
         return letters.randomElement() ?? "❓"
     }
 }
-

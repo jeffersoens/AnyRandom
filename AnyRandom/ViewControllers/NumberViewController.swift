@@ -17,9 +17,6 @@ class NumberViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     
-// MARK: - Private Properties
-    private let pasteboard = UIPasteboard.general
-    
 // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,34 +29,29 @@ class NumberViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
 // MARK: - IB Actions
     @IBAction func copyFromAnswerLabel() {
-        //copyText(for: answerLabel) Раскомментить
+        copyText(for: answerLabel)
     }
     
     @IBAction func getRandomNumber() {
         copyButton.isHidden = false
+        
         let minimumNumber = Int(minimumTextField.text ?? "") ?? 100
         let maximumNumber = Int(maximumTextField.text ?? "") ?? 0
         
         if minimumNumber <= maximumNumber {
             answerLabel.text = Int.random(in: minimumNumber...maximumNumber).formatted()
         } else {
+            showAlert(
+                title: "Неверный диапазон",
+                message: "Проверьте корректность введённого диапазона",
+                actionTitle: "Ок"
+            )
+            minimumTextField.text = ""
+            maximumTextField.text = ""
+            answerLabel.text = ""
+            copyButton.isHidden = true
         }
-    }
-    
-}
-
-extension NumberViewController {
-    private func showAlert(title: String, message: String, actionTitle: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: actionTitle, style: .default) { _ in
-            self.minimumTextField.text = ""
-            self.maximumTextField.text = ""
-            self.copyButton.isHidden = true
-        }
-        alert.addAction(action)
-        present(alert, animated: true)
     }
 }

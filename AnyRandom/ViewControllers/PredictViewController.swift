@@ -21,6 +21,13 @@ class PredictViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emojiLabel.text = ""
+        describeLabel.text = ""
+    }
+    
+//MARK: - IB Actions
     @IBAction func letKnowAnswer() {
         let countOfAnswers = Int.random(in: 0...2)
         switch countOfAnswers {
@@ -33,8 +40,14 @@ class PredictViewController: UIViewController {
         }
     }
     
+//MARK: - Private Methods
     private func showAnswer(emoji: Character, describe: String) {
         emojiLabel.text = "\(emoji)"
-        describeLabel.text = describe
+        if emoji == Emoji.dontKnow.rawValue {
+            describeLabel.text = describe
+        } else {
+            describeLabel.text = describe + (quesionTextField.text ?? "")
+        }
+        
     }
 }

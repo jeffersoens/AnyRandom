@@ -19,13 +19,6 @@ class LotteryViewController: UIViewController {
     
     @IBOutlet var copyButton: UIButton!
     
-//MARK: - Private Properties
-    private var minimumNumber = 0
-    private var maximumNumber = 0
-    private var countOfGroup = 0
-    
-    private let pasteboard = UIPasteboard.general
-    
 // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,44 +32,36 @@ class LotteryViewController: UIViewController {
         view.endEditing(true)
     }
     
+// MARK: - IB Actions
     @IBAction func copyFromAnswerLabel() {
-        //copyText(for: answerLabel) Раскомментить
+        copyText(for: answerLabel)
     }
     
     @IBAction func getNumbers() {
-        titleLabel.text = "Итог:"
-        copyButton.isHidden = false
-        //answerLabel.text = getArray().formatted()
-    }
-    
-//MARK: - Private Methods
-    /*
-    private func getArray() -> [String] {
-        minimumNumber = Int(minimumTextField.text ?? "") ?? 0
-        maximumNumber = Int(maximumTextField.text ?? "") ?? 0
-        countOfGroup = Int(countTextField.text ?? "") ?? 1
+        let minimumNumber = Int(minimumTextField.text ?? "") ?? 0
+        let maximumNumber = Int(maximumTextField.text ?? "") ?? 0
+        let countOfGroup = Int(countTextField.text ?? "") ?? 1
         
         if minimumNumber < maximumNumber {
             var numbers = [Int]()
             for _ in 1...countOfGroup {
                 numbers.append(Int.random(in: minimumNumber...maximumNumber))
             }
+            answerLabel.text = (numbers.map { $0.description }).formatted()
+            titleLabel.text = "Итог:"
+            copyButton.isHidden = false
         } else {
-            /* Раскомментить
             showAlert(
-                title: "Упс... Ошибочка",
-                message: "Похоже Вы вышли за рамки границ",
+                title: "Неверный диапазон",
+                message: "Проверьте корректность введённого диапазона",
                 actionTitle: "Ок"
             )
             minimumTextField.text = ""
             maximumTextField.text = ""
             countTextField.text = ""
             copyButton.isHidden = true
-            */
+            answerLabel.text = ""
+            titleLabel.text = ""
         }
-        
-        //let array = numbers.map { $0.description }
-        //return "[array]"
     }
-    */
 }
