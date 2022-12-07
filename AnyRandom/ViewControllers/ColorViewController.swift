@@ -7,9 +7,9 @@
 
 import UIKit
 
-class RandomColorViewController: UIViewController {
+class ColorViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    // MARK: - IB Outlets
     
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var hexLabel: UILabel!
@@ -18,11 +18,12 @@ class RandomColorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         colorView.layer.borderWidth = 3
         colorView.layer.borderColor = UIColor.black.cgColor
     }
     
-    // MARK: - IBActions
+    // MARK: - IB Actions
     
     @IBAction func copyButtonTapped() {
         copyText(for: hexLabel)

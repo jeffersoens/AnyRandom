@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64085B0B2940CBB400DB6F2C /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64085B0A2940CBB400DB6F2C /* RandomWordViewController.swift */; };
-		6417EB3A293F7D090031C54D /* RandomColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB39293F7D090031C54D /* RandomColorViewController.swift */; };
+		64085B0B2940CBB400DB6F2C /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64085B0A2940CBB400DB6F2C /* WordViewController.swift */; };
+		6417EB3A293F7D090031C54D /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB39293F7D090031C54D /* ColorViewController.swift */; };
 		6417EB3C293F94240031C54D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB3B293F94240031C54D /* Alerts.swift */; };
-		6417EB3F293FA09C0031C54D /* CreateTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB3E293FA09C0031C54D /* CreateTeamsViewController.swift */; };
+		6417EB3F293FA09C0031C54D /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417EB3E293FA09C0031C54D /* TeamsViewController.swift */; };
 		64630046293E2C84000934C6 /* RandomModesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64630045293E2C84000934C6 /* RandomModesViewController.swift */; };
 		647A264629410C9B00683D05 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264429410C9B00683D05 /* Letter.swift */; };
 		647A264729410C9B00683D05 /* Predict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264529410C9B00683D05 /* Predict.swift */; };
 		647A264D29410CAF00683D05 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264829410CAF00683D05 /* TimeViewController.swift */; };
 		647A264E29410CAF00683D05 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264929410CAF00683D05 /* LotteryViewController.swift */; };
-		647A264F29410CAF00683D05 /* PredictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264A29410CAF00683D05 /* PredictViewController.swift */; };
+		647A264F29410CAF00683D05 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264A29410CAF00683D05 /* QuestionViewController.swift */; };
 		647A265029410CAF00683D05 /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264B29410CAF00683D05 /* NumberViewController.swift */; };
 		647A265129410CAF00683D05 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A264C29410CAF00683D05 /* LetterViewController.swift */; };
 		64EE36FF2936850F0053C310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EE36FE2936850F0053C310 /* AppDelegate.swift */; };
@@ -28,16 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		64085B0A2940CBB400DB6F2C /* RandomWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
-		6417EB39293F7D090031C54D /* RandomColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorViewController.swift; sourceTree = "<group>"; };
+		64085B0A2940CBB400DB6F2C /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		6417EB39293F7D090031C54D /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		6417EB3B293F94240031C54D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		6417EB3E293FA09C0031C54D /* CreateTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamsViewController.swift; sourceTree = "<group>"; };
+		6417EB3E293FA09C0031C54D /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		64630045293E2C84000934C6 /* RandomModesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomModesViewController.swift; sourceTree = "<group>"; };
 		647A264429410C9B00683D05 /* Letter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		647A264529410C9B00683D05 /* Predict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predict.swift; sourceTree = "<group>"; };
 		647A264829410CAF00683D05 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		647A264929410CAF00683D05 /* LotteryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
-		647A264A29410CAF00683D05 /* PredictViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictViewController.swift; sourceTree = "<group>"; };
+		647A264A29410CAF00683D05 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		647A264B29410CAF00683D05 /* NumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
 		647A264C29410CAF00683D05 /* LetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 		64EE36FB2936850F0053C310 /* AnyRandom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyRandom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,15 +111,15 @@
 		64EE3713293685430053C310 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				647A264C29410CAF00683D05 /* LetterViewController.swift */,
-				647A264929410CAF00683D05 /* LotteryViewController.swift */,
-				647A264B29410CAF00683D05 /* NumberViewController.swift */,
-				647A264A29410CAF00683D05 /* PredictViewController.swift */,
-				647A264829410CAF00683D05 /* TimeViewController.swift */,
 				64630045293E2C84000934C6 /* RandomModesViewController.swift */,
-				6417EB39293F7D090031C54D /* RandomColorViewController.swift */,
-				6417EB3E293FA09C0031C54D /* CreateTeamsViewController.swift */,
-				64085B0A2940CBB400DB6F2C /* RandomWordViewController.swift */,
+				647A264B29410CAF00683D05 /* NumberViewController.swift */,
+				647A264A29410CAF00683D05 /* QuestionViewController.swift */,
+				6417EB39293F7D090031C54D /* ColorViewController.swift */,
+				647A264C29410CAF00683D05 /* LetterViewController.swift */,
+				6417EB3E293FA09C0031C54D /* TeamsViewController.swift */,
+				64085B0A2940CBB400DB6F2C /* WordViewController.swift */,
+				647A264829410CAF00683D05 /* TimeViewController.swift */,
+				647A264929410CAF00683D05 /* LotteryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -217,17 +217,17 @@
 				64EE3716293685910053C310 /* RandomModes.swift in Sources */,
 				647A265129410CAF00683D05 /* LetterViewController.swift in Sources */,
 				64630046293E2C84000934C6 /* RandomModesViewController.swift in Sources */,
-				6417EB3A293F7D090031C54D /* RandomColorViewController.swift in Sources */,
+				6417EB3A293F7D090031C54D /* ColorViewController.swift in Sources */,
 				647A264629410C9B00683D05 /* Letter.swift in Sources */,
 				647A264E29410CAF00683D05 /* LotteryViewController.swift in Sources */,
 				64EE36FF2936850F0053C310 /* AppDelegate.swift in Sources */,
 				647A264D29410CAF00683D05 /* TimeViewController.swift in Sources */,
 				647A264729410C9B00683D05 /* Predict.swift in Sources */,
-				647A264F29410CAF00683D05 /* PredictViewController.swift in Sources */,
+				647A264F29410CAF00683D05 /* QuestionViewController.swift in Sources */,
 				6417EB3C293F94240031C54D /* Alerts.swift in Sources */,
-				64085B0B2940CBB400DB6F2C /* RandomWordViewController.swift in Sources */,
+				64085B0B2940CBB400DB6F2C /* WordViewController.swift in Sources */,
 				64EE37012936850F0053C310 /* SceneDelegate.swift in Sources */,
-				6417EB3F293FA09C0031C54D /* CreateTeamsViewController.swift in Sources */,
+				6417EB3F293FA09C0031C54D /* TeamsViewController.swift in Sources */,
 				647A265029410CAF00683D05 /* NumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
